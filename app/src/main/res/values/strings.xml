@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">SaoPauloApp</string>
+
+    //restaurantes
+    <string name="smocoto">Seu nome foi dado pelos clientes do Sr. José de Almeida, que começou vendendo um caldo de mocotó especial nesse espaço há mais de 40 anos. Atualmente, o restaurante Mocotó é liderado pelo filho do Sr. José, o Chef Rodrigo Oliveira, que começou a ajudá-lo aos 13 anos de idade e que “por acidente”, em 2004, inventou o famoso dadinho de tapioca. Localizado na Zona Norte de São Paulo, o Mocotó está entre os 50 melhores restaurantes da América Latina pela 50 Best Restaurants. Seu diferencial? Comida sertaneja!
+
+Com um ambiente colorido e alegre, aqui você encontra um torresmo carnudo e suculento, carne seca, carne de sol, baião de dois, mocofava entre tantos outros pratos deliciosos. Para acompanhar, vale provar a Mocobreja ou uma das diversas caipirinhas, que muitas vezes trazem a rapadura como ingrediente. E para finalizar, que tal provar um crème brûlée de doce de leite?</string>
+    
+    <string name="scasadoporco"> Também na lista dos 50 Best Restaurants, porém garantindo o 11º lugar em 2021, este é sem sombra de dúvidas o restaurante favorito dos amantes de carne suína. No centro da cidade, A Casa do Porco oferece uma variedade gigante de pratos criados pelo Chef Jefferson Rueda.
+
+Nascido em São José do Rio Pardo, Rueda sonha em deixar um legado sobre o resgate da cultura da carne suína e faz o aproveitamento do animal por inteiro como forma de respeitar sua vida, sem desperdícios. Entre os pratos que se destacam na casa está o Porco Sanzé, um porco assado lentamente por 6 a 9 horas. </string>
+
+    <string name="safiguieira"> Embaixo de uma figueira centenária que dá seu nome está A Figueira Rubaiyat, um dos restaurantes do grupo Rubaiyat, já presente em quatro países. O restaurante conta com uma fazenda onde são criados bovinos, suínos e aves de raças premium. Neste ambiente, onde há elegância sem deixar a energia da natureza de lado, você pode encontrar seu corte e ponto de carne favorito.
+
+Nossa dica é que você prove o carpaccio de filé mignon com rúcula como entrada e a tirita de picanha ou baby beef como prato principal acompanhado de um bom vinho tinto. E ao final, peça o pudim de leite e um cafezinho para fechar com chave de ouro. </string>
+
+    <string name="standor"> Gosta de comida indiana? Com um Tandoor – forno de barro tradicional da Índia que dá nome ao restaurante –, o casal Mansha e Lakhi Daswani oferece uma experiência gastronômica autêntica do país asiático.
+
+Entre os pratos típicos servidos estão os pães naan e chapati, o panner (queijo ricota), servido com diferentes molhos, e as samosas (pastéis fritos), com recheio de vegetais ou de frango. Como indicação, o prato favorito de Lakhi: Roghan Josh, carneiro desossado cozido em molho cremoso de cardamomo, pimenta, canela, coentro, alho, cebola e tomate. </string>
+
+    <string name="sseuoswaldo"> Quer saber onde comer hambúrguer barato em São Paulo? Quase sempre lotado e com fila de espera, o Seu Oswaldo faz sucesso desde 1966 com seu hambúrguer, molho de tomate e maionese caseira. O mais legal desse lugar é notar que a simplicidade e o sabor podem caminhar juntos.
+
+Neste ambiente nostálgico, onde inclusive você recebe sua coca-cola na garrafa de vidro, cada lanche custa cerca de R$25 e o pagamento pode ser feito apenas em dinheiro ou no débito. </string>
+
+
+    //bibliotecas
+    <string name="sbibsaopaulo"> Localizada em Santana, na Zona Norte, a Biblioteca de São Paulo foi inaugurada em 2010 e desde então é uma ótima opção na cidade pra quem quer ler um bom livro. Com mais de 4 mil metros quadrados de área, o espaço guarda cerca de 35 mil itens e agrada todos os tipos de leitores. O espaço modelo é tão impressionante que a biblioteca esteve entre as finalistas do Prêmio de Melhor Biblioteca do Mundo, promovido pela Feira do Livro de Londres em Associação dos Editores do Reino Unido. </string>
+
+    <string name="sbibvilla"> A jovem biblioteca — inaugurada em 2014 — está localizada dentro do Parque Villa-Lobos, ao lado da Marginal Pinheiros na Zona Oeste da Capital, ocupa quatro mil metros quadrados e tem um acervo constantemente atualizado de livros, revistas, jornais, audiolivros, entre muitas outras opções. O espaço conta com ludoteca e sala de jogos eletrônicos, além de ambientes confortáveis dedicados especialmente à leitura. </string>
+
+    <string name="sbibalceu"> Espaço bacana para os amantes de poesia. Fundada em 1979, a Biblioteca Alceu Amoroso de Lima se tornou um ponto cultural importante da região de Pinheiros. Desde 2006 o espaço traz programação e acervo dedicados especialmente à poesia. A bela arquitetura do prédio (a fachada traz a palavra poesia escrita em cores vivas) foi projetada com a ajuda de bibliotecários. </string>
+
+    <string name="sbibmario"> Fundada em 1925, a Biblioteca Mario de Andrade é considerada a maior biblioteca municipal do Brasil e é dona de um dos mais importantes acervos documentais e bibliográficos do país. O espaço também costuma sediar eventos como leituras dramáticas, oficinas e até exibição de filmes gratuita. </string>
+
+    <string name="sbibcentro"> O CCSP (Centro Cultural de São Paulo) possui vários ambientes e diversas bibliotecas, além da famosa gibiteca. Ao todo, são seis bibliotecas e coleções especiais que, juntas, possuem um acervo de cerca de 120 mil livros e documentos. A Biblioteca Pública Municipal Louis Braille, por exemplo, é planejada e equipada para atender pessoas com deficiência visual e conta, portanto, com livros em braile e audiolivros. </string>
+
+
+    //parques
+    <string name="spqibirapuera"> O Ibirapuera é o mais famoso parque em SP e um dos mais importantes parques urbanos da cidade. Ele foi inaugurado em 1954 e ocupa uma área de quase 1.600.000 m².
+
+O Parque do Ibirapuera tem três lagos artificiais, ciclovia, pistas de corrida, quadras poliesportivas e uma deliciosa área verde para relaxar da correria do dia-a-dia.
+
+O parque conta com espaços icônicos projetados pelo mestre Oscar Niemeyer, como: o Auditório Ibirapuera, o Pavilhão da Bienal de SP, o Planetário e a Oca. Tem atividades para todas as idades.
+
+Além disso, importantes museus em SP também ficam dentro do Parque Ibirapuera. São eles: MAM (Museu de Arte Moderna), Museu Afro Brasil e o Museu de Arte Contemporânea (MAC-USP), que fica do outro lado da avenida, mas faz parte do complexo. </string>
+
+    <string name="spqtrianon"> o Parque Tenente Siqueira Campos, perto da estação Trianon da linha verde do metrô, na Avenida Paulista, um dos pontos mais importantes da Avenida Paulista.
+
+O local é uma das mais importantes áreas verdes do coração da cidade. O parque é um resquício remanescente da Mata Atlântica original, com árvores centenárias, incluindo muitas espécies ameaçadas de extinção.
+
+Além das obras de arte naturais, você pode caminhar pela Trilha do Fauno e chegar até belíssimas esculturas de Victor Brecheret e Francisco Leopoldo Silva.
+
+É uma excelente oportunidade de entrar em contato com a natureza em pleno coração de São Paulo. Vale a pena dar uma passada por lá. </string>
+
+    <string name="spqaugusta"> Inaugurado recentemente, o Parque Augusta Prefeito Bruno Covas é o novo parque do centro e logo entrou na lista dos melhores parques de São Paulo.
+
+Conta com uma área de 23 mil metros. Opção perfeita para quem procura um parque em São Paulo com gramado sombreado por árvores.
+
+O parque tem parquinhos para crianças, cachorródromo e até um redário (tem que levar a própria rede). Possui também uma bela arquibancada e deck elevado.
+
+Outra atração são as duas construções tombadas que foram restauradas: a Casa das Araras e o portal de entrada (na Rua Caio Prado).
+
+Ahhh, lá não tem pista de corrida e não são permitidas bicicletas. </string>
+
+    <string name="spqagua"> O Parque da Água Branca é um pedacinho do interior rural do estado em plena Zona Oeste da cidade, pertinho do Terminal Rodoviário da Barra Funda.
+
+Ele ocupa uma área de 137.000m² e abriga o Museu Geológico, a Casa de Caboclo (uma réplica de residências da zona rural), o Aquário do Instituto de Pesca, o Relógio do Sol, espaço de leitura e uma brinquedoteca.
+
+O Parque ainda possui uma Arena Hípica e um belo espaço para exposições e feiras. É um passeio ideal para todas as idades e toda a família. </string>
+
+    <string name="spqvilla"> Com uma grande área de 732 mil m² em plena Zona Oeste da capital paulista, o Parque Villa-Lobos é a opção perfeita para quem quer andar de bicicleta, patins, fazer caminhadas ou mesmo aproveitar o ar fresco dessa imensa área verde cheia de árvores da Mata Atlântica.
+
+O Parque Villa Lobos é cortado por uma imensa ciclovia, e conta com uma excelente infraestrutura. Tem quadras poliesportivas, campos poliesportivos, tabela de basquete e playgrounds para a garotada.
+
+Além disso, também tem um anfiteatro, um orquidário, uma biblioteca, um cachorródromo para os pets e várias opções de lanchonetes. </string>
+
+    //shopping
+    <string name="sshbourbon"> Localizado ao lado de um dos mais modernos estádios de futebol do Brasil o Allianz Park, o Bourbon é um dos melhores shoppings de São Paulo. Com diversas lojas de marcas renomadas, e muitas opções na praça de alimentação, ele ainda possui a rede de supermercados Zaffari, que oferece preços bastante competitivos.
+
+
+Ele possui 10 salas de cinema, que inclui uma tecnologia iMax 3D. A praça de alimentação possui espaço para 1200 pessoas. Outro grande destaque do shopping é o Teatro Bradesco, um dos mais modernos da América Latina, com espaço para 1500 lugares.
+
+
+Peças renomadas e musicais famosos já passaram pelo palco desse teatro. Clientes relatam que ele é um dos shoppings mais completos da cidade, além de ter uma localização bem interessante. A equipe também é bem elogiada, com ótimo atendimento nas lojas. Vale muito a pena conhecer! </string>
+
+    <string name="sshmorumbi"> Lendo os comentários dos clientes do MorumbiShopping podemos afirmar: ele tem tudo. Inclusive, muitas pessoas recomendam ir com calçados confortáveis e com tempo livre, pois você não irá conhecê-lo todo em algumas horas. Ele se destaca dos demais por ser o primeiro shopping a criar uma área exclusiva de moda.
+
+
+Até hoje, ele reúne lojas das grandes marcas não apenas do setor de moda, mas também restaurantes de chefs premiados na sua praça de alimentação. Porém, não é um shopping de São Paulo barato. Prepare-se para gastar uma boa quantia quando for lá, o que pode ser um ponto negativo para algumas pessoas.
+
+
+Diversos veículos o premiaram como o shopping mais completo de São Paulo. Ele também ganhou o selo Traveller's Choice em 2022 pelo Tripadvisor, além de possuir uma ótima nota no site. O tamanho do shopping também impressiona! Ideal para visitar em longas tardes de dias chuvosos. </string>
+
+    <string name="sshiguatemi"> Quando comentamos que o Shopping Iguatemi é o mais antigo de São Paulo, fundado em 1966, é comum pensar que ele é antiquado, certo? De forma nenhuma! É um dos melhores shoppings da capital, muito moderno, atraente e com diversas opções de lojas para você fazer a festa.
+
+
+Dedicado a proporcionar aos clientes uma experiência única, ele possui 3 pisos e mais de 2.600 vagas de estacionamento, inclusive para carros elétricos e portadores de deficiência. Lá você encontra desde lojas de grife até as de departamento. Contudo, não oferece tanta diversão para crianças, sendo mais indicado para adultos.
+
+
+Com 9 salas de cinema e fazendo parte do grupo Iguatemi, que possui diversos outros shoppings em São Paulo e em outras cidades, ele é bem organizado. Muitos reviews o consideram como o shopping mais chique da cidade, sem dizer que ele é muito bem localizado, em uma das avenidas mais importantes da capital!</string>
+
+    <string name="ssheldorado"> Pioneiro e tradicional, o Shopping Eldorado é uma ótima opção para quem está na zona sul da cidade de São Paulo. Inaugurado em 1981, foi o primeiro a ter uma praça de alimentação em shoppings, no ano de 1992, tendência que se espalhou em todos os estabelecimentos desse tipo do país.
+
+
+E até hoje ela está lá, com restaurantes especialíssimos, desde fast foods como KFC até mais sofisticados com a Vivenda do Camarão. As lojas também não decepcionam, e os clientes que visitaram disse que é possível encontrar de tudo, a preços bem mais razoáveis que em outros lugares.
+
+
+Com um amplo setor de serviços, onde você pode encontrar desde recarga de carros elétricos até serviço de postagem, esse é certamente um ótimo lugar para levar a família. E por falar em família, as opções de lazer e cinema são simplesmente imperdíveis! Um dos melhores shoppings centers de São Paulo. </string>
+
+    <string name="sshcenter"> Um dos maiores destaques do Shopping Center Norte é a acessibilidade. Ele foi construído em apenas um pavimento térreo, sem andares. Mas o shopping também possui outras iniciativas de inclusão como mesas com assentos preferenciais na praça de alimentação e banheiros adaptados.
+
+
+Seu pet é bem-vindo para passear no Shopping Center Norte, com exceção apenas da praça de alimentação. Quem visitou destacou a segurança e o bom atendimento dos funcionários, mas a estrutura do é um pouco envelhecida. Possui um Cinemark com ótimos lançamentos e restaurantes da gastronomia brasileira e internacional.
+
+
+Segundo o site oficial, é o shopping com maior número de vendas por metro quadrado em toda São Paulo. E fica em uma região com grandes empreendimentos da mesma marca, como o Lar Center e o Expo Center Norte. Possui uma posição privilegiada da cidade e é uma ótima opção! </string>
+
+</resources>
