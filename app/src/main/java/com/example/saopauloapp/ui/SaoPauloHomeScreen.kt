@@ -1,6 +1,7 @@
 package com.example.saopauloapp.ui
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.MaterialTheme
@@ -8,6 +9,7 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -20,11 +22,20 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.compose.rememberNavController
 import com.example.saopauloapp.R
+import com.example.saopauloapp.data.DataSource.bibliotecas
+import com.example.saopauloapp.data.DataSource.parques
+import com.example.saopauloapp.data.DataSource.restaurantes
+import com.example.saopauloapp.data.DataSource.shoppings
+import com.example.saopauloapp.model.Local
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 @Composable
-fun SaoPauloHomeScreen(){
+fun SaoPauloHomeScreen(
+    onCategoryClicked: (List<Local>) -> Unit = {},
+) {
+
     Scaffold(
         topBar ={ TopAppBar() {
             Text(text = "São Paulo", style =
@@ -36,7 +47,10 @@ fun SaoPauloHomeScreen(){
     }
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(horizontal = 5.dp, vertical = 70.dp)){
         Row() {
-            Box(modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp), contentAlignment = Alignment.Center) {
+            Box(modifier =  Modifier
+                .padding(horizontal = 5.dp, vertical = 15.dp)
+                .clickable(onClick = {onCategoryClicked(restaurantes)}),
+                contentAlignment = Alignment.Center) {
                 Image(
                     painter = painterResource(id = R.drawable.restaurant),
                     contentDescription = null,
@@ -47,7 +61,10 @@ fun SaoPauloHomeScreen(){
                 TextStyle(color = Color.White, fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, shadow = Shadow() ))
 
             }
-            Box(modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp), contentAlignment = Alignment.Center) {
+            Box(modifier =  Modifier
+                .padding(horizontal = 5.dp, vertical = 15.dp)
+                .clickable(onClick = {onCategoryClicked(parques)} ),
+                contentAlignment = Alignment.Center) {
                 Image(
                     painter = painterResource(id = R.drawable.park),
                     contentDescription = null,
@@ -61,7 +78,10 @@ fun SaoPauloHomeScreen(){
             }
         }
         Row() {
-            Box(modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp), contentAlignment = Alignment.Center) {
+            Box(modifier =  Modifier
+                .padding(horizontal = 5.dp, vertical = 15.dp)
+                .clickable(onClick = {onCategoryClicked(shoppings)} ),
+                contentAlignment = Alignment.Center) {
                 Image(
                     painter = painterResource(id = R.drawable.mall),
                     contentDescription = null,
@@ -72,7 +92,10 @@ fun SaoPauloHomeScreen(){
                 TextStyle(color = Color.White, fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, shadow = Shadow() ))
 
             }
-            Box(modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp), contentAlignment = Alignment.Center) {
+            Box(modifier = Modifier
+                .padding(horizontal = 5.dp, vertical = 15.dp)
+                .clickable(onClick = {onCategoryClicked(bibliotecas)} ),
+                contentAlignment = Alignment.Center) {
                 Image(
                     painter = painterResource(id = R.drawable.libdark),
                     contentDescription = null,

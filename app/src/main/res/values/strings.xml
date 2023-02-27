@@ -2,15 +2,9 @@
     <string name="app_name">SaoPauloApp</string>
 
     //restaurantes
-    <string name="smocoto">Seu nome foi dado pelos clientes do Sr. José de Almeida, que começou vendendo
-        um caldo de mocotó especial nesse espaço há mais de 40 anos. Atualmente, o restaurante Mocotó é
-        liderado pelo filho do Sr. José, o Chef Rodrigo Oliveira, que começou a ajudá-lo aos 13 anos de
-        idade e que “por acidente”, em 2004, inventou o famoso dadinho de tapioca. Localizado na Zona Norte
-        de São Paulo, o Mocotó está entre os 50 melhores restaurantes da América Latina pela 50 Best
-        Restaurants. Seu diferencial? Comida sertaneja!
+    <string name="smocoto">Seu nome foi dado pelos clientes do Sr. José de Almeida, que começou vendendo um caldo de mocotó especial nesse espaço há mais de 40 anos. Atualmente, o restaurante Mocotó é liderado pelo filho do Sr. José, o Chef Rodrigo Oliveira, que começou a ajudá-lo aos 13 anos de idade e que “por acidente”, em 2004, inventou o famoso dadinho de tapioca. Localizado na Zona Norte de São Paulo, o Mocotó está entre os 50 melhores restaurantes da América Latina pela 50 Best Restaurants. Seu diferencial? Comida sertaneja!
 
 Com um ambiente colorido e alegre, aqui você encontra um torresmo carnudo e suculento, carne seca, carne de sol, baião de dois, mocofava entre tantos outros pratos deliciosos. Para acompanhar, vale provar a Mocobreja ou uma das diversas caipirinhas, que muitas vezes trazem a rapadura como ingrediente. E para finalizar, que tal provar um crème brûlée de doce de leite?</string>
-
 
     <string name="scasadoporco"> Também na lista dos 50 Best Restaurants, porém garantindo o 11º lugar em 2021, este é sem sombra de dúvidas o restaurante favorito dos amantes de carne suína. No centro da cidade, A Casa do Porco oferece uma variedade gigante de pratos criados pelo Chef Jefferson Rueda.
 
@@ -89,13 +83,7 @@ Ele possui 10 salas de cinema, que inclui uma tecnologia iMax 3D. A praça de al
 
 Peças renomadas e musicais famosos já passaram pelo palco desse teatro. Clientes relatam que ele é um dos shoppings mais completos da cidade, além de ter uma localização bem interessante. A equipe também é bem elogiada, com ótimo atendimento nas lojas. Vale muito a pena conhecer! </string>
 
-    <string name="sshmorumbi"> Lendo os comentários dos clientes do MorumbiShopping podemos afirmar: ele tem tudo. Inclusive, muitas pessoas recomendam ir com calçados confortáveis e com tempo livre, pois você não irá conhecê-lo todo em algumas horas. Ele se destaca dos demais por ser o primeiro shopping a criar uma área exclusiva de moda.
 
-
-Até hoje, ele reúne lojas das grandes marcas não apenas do setor de moda, mas também restaurantes de chefs premiados na sua praça de alimentação. Porém, não é um shopping de São Paulo barato. Prepare-se para gastar uma boa quantia quando for lá, o que pode ser um ponto negativo para algumas pessoas.
-
-
-Diversos veículos o premiaram como o shopping mais completo de São Paulo. Ele também ganhou o selo Traveller's Choice em 2022 pelo Tripadvisor, além de possuir uma ótima nota no site. O tamanho do shopping também impressiona! Ideal para visitar em longas tardes de dias chuvosos. </string>
 
     <string name="sshiguatemi"> Quando comentamos que o Shopping Iguatemi é o mais antigo de São Paulo, fundado em 1966, é comum pensar que ele é antiquado, certo? De forma nenhuma! É um dos melhores shoppings da capital, muito moderno, atraente e com diversas opções de lojas para você fazer a festa.
 
