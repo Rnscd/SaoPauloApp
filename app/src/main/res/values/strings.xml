@@ -74,6 +74,8 @@ O Parque Villa Lobos é cortado por uma imensa ciclovia, e conta com uma excelen
 
 Além disso, também tem um anfiteatro, um orquidário, uma biblioteca, um cachorródromo para os pets e várias opções de lanchonetes. </string>
 
+
+
     //shopping
     <string name="sshbourbon"> Localizado ao lado de um dos mais modernos estádios de futebol do Brasil o Allianz Park, o Bourbon é um dos melhores shoppings de São Paulo. Com diversas lojas de marcas renomadas, e muitas opções na praça de alimentação, ele ainda possui a rede de supermercados Zaffari, que oferece preços bastante competitivos.
 
@@ -108,5 +110,15 @@ Seu pet é bem-vindo para passear no Shopping Center Norte, com exceção apenas
 
 
 Segundo o site oficial, é o shopping com maior número de vendas por metro quadrado em toda São Paulo. E fica em uma região com grandes empreendimentos da mesma marca, como o Lar Center e o Expo Center Norte. Possui uma posição privilegiada da cidade e é uma ótima opção! </string>
+
+
+    //  shmorumbi
+    <string name="sshmorumbi"> Lendo os comentários dos clientes do MorumbiShopping podemos afirmar: ele tem tudo. Inclusive, muitas pessoas recomendam ir com calçados confortáveis e com tempo livre, pois você não irá conhecê-lo todo em algumas horas. Ele se destaca dos demais por ser o primeiro shopping a criar uma área exclusiva de moda.
+
+
+Até hoje, ele reúne lojas das grandes marcas não apenas do setor de moda, mas também restaurantes de chefs premiados na sua praça de alimentação. Porém, não é um shopping de São Paulo barato. Prepare-se para gastar uma boa quantia quando for lá, o que pode ser um ponto negativo para algumas pessoas.
+
+
+Diversos veículos o premiaram como o shopping mais completo de São Paulo.  </string>
 
 </resources>

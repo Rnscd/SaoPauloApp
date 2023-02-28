@@ -19,18 +19,16 @@ class SPViewModel: ViewModel() {
     val bibState: StateFlow<SPUiState> = _bibState.asStateFlow()
 
     private val _parState =
-        MutableStateFlow(SPUiState(categoryItems = DataSource.getParqueData()))
+        MutableStateFlow(SPUiState(categoryItems = DataSource.getParqueData(), currentPlace = DataSource.getParqueData()[0]))
     val parState: StateFlow<SPUiState> = _parState.asStateFlow()
 
     private val _resState =
-        MutableStateFlow(SPUiState(categoryItems = DataSource.getRestauranteData()))
+        MutableStateFlow(SPUiState(categoryItems = DataSource.getRestauranteData(), currentPlace = DataSource.getRestauranteData()[0]))
     val resState: StateFlow<SPUiState> = _resState.asStateFlow()
 
     private val _shoState =
-        MutableStateFlow(SPUiState(categoryItems = DataSource.getShoppingData()))
+        MutableStateFlow(SPUiState(categoryItems = DataSource.getShoppingData(), currentPlace = DataSource.getShoppingData()[0]))
     val shoState: StateFlow<SPUiState> = _shoState.asStateFlow()
-
-
 
     fun updateCurrentBib(selectedPlace: Local) {
         _bibState.update {
@@ -38,13 +36,6 @@ class SPViewModel: ViewModel() {
         }
     }
 
-    fun navigateToBibDetailsPage() {
-            _bibState.update {
-                it.copy()
-            }
-
-
-        }
 
     fun updateCurrentPar(selectedPlace: Local) {
         _parState.update {
@@ -52,12 +43,7 @@ class SPViewModel: ViewModel() {
         }
     }
 
-    fun navigateToParDetailsPage() {
-        _parState.update {
-            it.copy()
-        }
 
-    }
 
     fun updateCurrentRes(selectedPlace: Local) {
         _resState.update {
@@ -65,13 +51,7 @@ class SPViewModel: ViewModel() {
         }
     }
 
-    fun navigateToResDetailsPage() {
-        _resState.update {
-            it.copy()
-        }
 
-
-    }
 
     fun updateCurrentSho(selectedPlace: Local) {
         _shoState.update {
@@ -79,11 +59,4 @@ class SPViewModel: ViewModel() {
         }
     }
 
-    fun navigateToShoDetailsPage() {
-        _shoState.update {
-            it.copy()
-        }
-
-
-    }
     }

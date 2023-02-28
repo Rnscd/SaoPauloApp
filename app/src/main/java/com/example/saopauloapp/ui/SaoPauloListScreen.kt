@@ -29,11 +29,8 @@ import com.example.saopauloapp.model.Local
 fun SaoPauloListScreen(
     tipo: List<Local>,
     titulo: String = "Sao Paulo",
-    viewModel: SPViewModel,
-    onLocationClicked: () -> Unit = {},
+    onLocationClicked: (Local) -> Unit = {},
     onBackClicked: () -> Unit = {},
-    onItemClicked: (Local) -> Unit = {},
-    places: Local
 ){
 
     Scaffold(
@@ -50,7 +47,8 @@ fun SaoPauloListScreen(
 
         LazyColumn() {
             items(tipo) { places ->
-                LocaisRow(tipos = places, onLocationClicked = onLocationClicked, onItemClicked= { viewModel.updateCurrentBib(it) })
+                LocaisRow(tipos = places, onLocationClicked ={ onLocationClicked(places)} ) {
+                }
             }
         }
     }

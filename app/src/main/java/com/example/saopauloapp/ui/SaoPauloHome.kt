@@ -17,13 +17,13 @@ import com.example.saopauloapp.ui.theme.SaoPauloAppTheme
 
 
 enum class Dest {
-    HOME, LISTBIB, DETAILSBIB, LISTPAR, DETAILSPAR,LISTSHO, DETAILSSHO,LISTRES, DETAILSRES
+    HOME, LISTBIB, DETAILSBIB, LISTPAR, DETAILSPAR,LISTSHO, DETAILSSHO, LISTRES, DETAILSRES
 }
 
 
 @Composable
 fun SaoPauloApp(){
- //   SaoPauloListScreen(tipo = bibliotecas)
+
     val navController = rememberNavController()
 
     val viewModel: SPViewModel = viewModel()
@@ -37,61 +37,45 @@ fun SaoPauloApp(){
         composable(Dest.LISTBIB.name){
             SaoPauloListScreen(tipo = DataSource.getBibliotecaData(),
                 titulo = "Bibliotecas",
-                onLocationClicked = {navController.navigate(Dest.DETAILSBIB.name)},
+                onLocationClicked = {
+                    viewModel.updateCurrentBib(it)
+                    navController.navigate(Dest.DETAILSBIB.name)},
                 onBackClicked = {navController.navigateUp()},
-                onItemClicked = {
-                    viewModel.navigateToBibDetailsPage()
-                                },
-                places = bibState.currentPlace,
-                viewModel = viewModel
                 )
         }
         composable(Dest.LISTPAR.name){
             SaoPauloListScreen(tipo = DataSource.getParqueData(),
                 titulo = "Parques",
-                viewModel = viewModel,
-                onLocationClicked = {navController.navigate(Dest.DETAILSPAR.name)},
-                onBackClicked = {navController.navigateUp()},
-                onItemClicked = {
+                onLocationClicked = {
                     viewModel.updateCurrentPar(it)
-                    },
-                places = bibState.currentPlace
+                    navController.navigate(Dest.DETAILSPAR.name)},
+                onBackClicked = {navController.navigateUp()},
+
             )
         }
         composable(Dest.LISTRES.name){
             SaoPauloListScreen(tipo = DataSource.getRestauranteData(),
                 titulo = "Restaurantes",
-                onLocationClicked = {navController.navigate(Dest.DETAILSRES.name)},
-                onBackClicked = {navController.navigateUp()},
-                onItemClicked = {
+                onLocationClicked = {
                     viewModel.updateCurrentRes(it)
-                  },
-                places = bibState.currentPlace,
-                viewModel = viewModel
+                    navController.navigate(Dest.DETAILSRES.name)},
+                onBackClicked = {navController.navigateUp()},
+
             )
         }
         composable(Dest.LISTSHO.name){
             SaoPauloListScreen(tipo = DataSource.getShoppingData(),
                 titulo = "Shoppings",
-                onLocationClicked = {navController.navigate(Dest.DETAILSBIB.name)},
-                onBackClicked = {navController.navigateUp()},
-                onItemClicked = {
+                onLocationClicked = {
                     viewModel.updateCurrentSho(it)
-                    },
-                places = bibState.currentPlace,
-                viewModel = viewModel
+                    navController.navigate(Dest.DETAILSSHO.name)},
+                onBackClicked = {navController.navigateUp()},
+
             )
         }
 
 
-
-
-
-
-
-
         composable(Dest.DETAILSRES.name){
-            viewModel.navigateToResDetailsPage()
             SaoPauloDetailsScreen(
                 selecinado = viewModel.resState.collectAsState().value.currentPlace,
                 titulo = viewModel.resState.collectAsState().value.currentPlace.nome,
@@ -99,7 +83,6 @@ fun SaoPauloApp(){
             )
         }
         composable(Dest.DETAILSPAR.name){
-            viewModel.navigateToParDetailsPage()
             SaoPauloDetailsScreen(
                 selecinado = viewModel.parState.collectAsState().value.currentPlace,
                 titulo = viewModel.parState.collectAsState().value.currentPlace.nome,
@@ -107,7 +90,6 @@ fun SaoPauloApp(){
             )
         }
         composable(Dest.DETAILSSHO.name){
-            viewModel.navigateToShoDetailsPage()
             SaoPauloDetailsScreen(
                 selecinado = viewModel.shoState.collectAsState().value.currentPlace,
                 titulo = viewModel.shoState.collectAsState().value.currentPlace.nome,
@@ -115,7 +97,6 @@ fun SaoPauloApp(){
             )
         }
         composable(Dest.DETAILSBIB.name){
-            viewModel.navigateToBibDetailsPage()
             SaoPauloDetailsScreen(
                 selecinado = bibState.currentPlace,
                 titulo = bibState.currentPlace.nome,
@@ -125,17 +106,6 @@ fun SaoPauloApp(){
     }
 }
 
-/*
-composable(Dest.DETAILRES.name){
-            viewModel.navigateToResDetailsPage()
-            SaoPauloDetailsScreen(
-                selecinado = DataSource.getShoppingData()[1],
-                titulo = DataSource.getShoppingData()[1].nome,
-                onBackClicked = {navController.navigateUp()}
-            )
-        }
-    }
- */
 
 
 

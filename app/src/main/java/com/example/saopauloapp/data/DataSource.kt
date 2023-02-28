@@ -13,7 +13,7 @@ object DataSource {
             Local(
                 1,
                 "Mocotó",
-                R.drawable.restaurant,
+                R.drawable.mocoto,
                 "Av. Nossa Sra do Loreto, 1100 – Vila Medeiros",
                 R.string.smocoto
             ),
@@ -34,14 +34,14 @@ object DataSource {
             Local(
                 4,
                 "Seu Oswaldo",
-                R.drawable.restaurant,
+                R.drawable.seuoswaldotwo,
                 "Rua Bom Pastor, 1659 – Ipiranga",
                 R.string.sseuoswaldo
             ),
             Local(
                 5,
                 "Tandoor",
-                R.drawable.restaurant,
+                R.drawable.tandoortwo,
                 "Rua Mário Amaral, 559 – Paraíso",
                 R.string.standor
             )
@@ -81,7 +81,7 @@ object DataSource {
             Local(
                 5,
                 "Parque Villa Lobos",
-                R.drawable.aguabranca,
+                R.drawable.parqvillalobos,
                 "Av. Prof. Fonseca Rodrigues, 2001 – Alto de Pinheiros",
                 R.string.spqvilla
             )
@@ -103,7 +103,7 @@ object DataSource {
                     "Morumbi Shopping",
                     R.drawable.morumbi,
                     "Av. Roque Petroni Júnior, 1089, Jardim das Acácias",
-                    R.string.sshcenter
+                    R.string.sshmorumbi
                 ),
                 Local(
                     3,
@@ -136,20 +136,20 @@ object DataSource {
                         "Biblioteca de São Paulo",
                         R.drawable.desaopaulo,
                         "Av. Cruzeiro do Sul, 2630 - Santana",
-                        R.string.smocoto
+                        R.string.sbibsaopaulo
                     ),
                     Local(
                         2,
                         "Biblioteca do Parque Villa-Lobos",
                         R.drawable.bibdoparquevillalobos,
                         "Av. Prof. Fonseca Rodrigues, 2001 - Alto de Pinheiros",
-                        R.string.scasadoporco
+                        R.string.sbibvilla
                     ),
                     Local(
                         3,
                         "Biblioteca Alceu Amoroso Lima",
                         R.drawable.bibalceuamorosolima,
-                        "ua Henrique Schaumann, 777 - Pinheiros",
+                        " Rua Henrique Schaumann, 777 - Pinheiros",
                         R.string.safiguieira
                     ),
                     Local(
@@ -169,5 +169,4 @@ object DataSource {
 
                 )
             }
-
 }
