@@ -4,43 +4,17 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.example.saopauloapp.R
 
-sealed class Local(
-    open val nome: String,
-    @DrawableRes open val foto: Int,
-    open val endereço: String,
+data class Local(
+    val id: Int,
+     val nome: String,
+    @DrawableRes  val foto: Int,
+     val endereço: String,
     @StringRes open val sobre: Int
-) {
-    data class RestauranteLocal(
-        override val nome: String,
-        @DrawableRes override val foto: Int,
-        override val endereço: String,
-        @StringRes  override val sobre: Int
-    ) :Local(nome, foto, endereço, sobre)
-
-    data class ParquesLocal(
-        override val nome: String,
-        @DrawableRes override val foto: Int,
-        override val endereço: String,
-        @StringRes  override val sobre: Int
-    ) :Local(nome, foto, endereço, sobre)
-
-    data class ShoppingLocal(
-        override val nome: String,
-        @DrawableRes  override val foto: Int,
-        override val endereço: String,
-        @StringRes  override val sobre: Int
-    ) :Local(nome, foto, endereço, sobre)
-
-    data class BibliotecaLocal(
-        override val nome: String,
-        @DrawableRes   override val foto: Int,
-        override val endereço: String,
-        @StringRes   override val sobre: Int
-    ) :Local(nome, foto, endereço, sobre)
+)
 
 
 
-}
+
 
 
 

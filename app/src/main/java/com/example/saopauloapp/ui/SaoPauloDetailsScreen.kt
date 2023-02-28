@@ -22,10 +22,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.saopauloapp.data.DataSource
-import com.example.saopauloapp.data.DataSource.bibliotecas
-import com.example.saopauloapp.data.DataSource.shoppings
 import com.example.saopauloapp.model.Local
-import com.example.saopauloapp.model.Local.ShoppingLocal
 import com.example.saopauloapp.model.SPUiState
 
 @Composable

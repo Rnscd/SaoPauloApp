@@ -22,18 +22,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.saopauloapp.R
-import com.example.saopauloapp.data.DataSource.bibliotecas
-import com.example.saopauloapp.data.DataSource.parques
-import com.example.saopauloapp.data.DataSource.restaurantes
-import com.example.saopauloapp.data.DataSource.shoppings
 import com.example.saopauloapp.model.Local
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 @Composable
 fun SaoPauloHomeScreen(
-    onCategoryClicked: (List<Local>) -> Unit = {},
+    navController: NavHostController
 ) {
 
     Scaffold(
@@ -47,9 +44,9 @@ fun SaoPauloHomeScreen(
     }
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(horizontal = 5.dp, vertical = 70.dp)){
         Row() {
-            Box(modifier =  Modifier
+            Box(modifier = Modifier
                 .padding(horizontal = 5.dp, vertical = 15.dp)
-                .clickable(onClick = {onCategoryClicked(restaurantes)}),
+                .clickable(onClick = { navController.navigate(Dest.LISTRES.name) }),
                 contentAlignment = Alignment.Center) {
                 Image(
                     painter = painterResource(id = R.drawable.restaurant),
@@ -61,9 +58,9 @@ fun SaoPauloHomeScreen(
                 TextStyle(color = Color.White, fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, shadow = Shadow() ))
 
             }
-            Box(modifier =  Modifier
+            Box(modifier = Modifier
                 .padding(horizontal = 5.dp, vertical = 15.dp)
-                .clickable(onClick = {onCategoryClicked(parques)} ),
+                .clickable(onClick = { navController.navigate(Dest.LISTPAR.name) }),
                 contentAlignment = Alignment.Center) {
                 Image(
                     painter = painterResource(id = R.drawable.park),
@@ -78,9 +75,9 @@ fun SaoPauloHomeScreen(
             }
         }
         Row() {
-            Box(modifier =  Modifier
+            Box(modifier = Modifier
                 .padding(horizontal = 5.dp, vertical = 15.dp)
-                .clickable(onClick = {onCategoryClicked(shoppings)} ),
+                .clickable(onClick = { navController.navigate(Dest.LISTSHO.name) }),
                 contentAlignment = Alignment.Center) {
                 Image(
                     painter = painterResource(id = R.drawable.mall),
@@ -94,7 +91,7 @@ fun SaoPauloHomeScreen(
             }
             Box(modifier = Modifier
                 .padding(horizontal = 5.dp, vertical = 15.dp)
-                .clickable(onClick = {onCategoryClicked(bibliotecas)} ),
+                .clickable(onClick = { navController.navigate(Dest.LISTBIB.name) }),
                 contentAlignment = Alignment.Center) {
                 Image(
                     painter = painterResource(id = R.drawable.libdark),
@@ -130,8 +127,11 @@ fun SaoPauloHomeScreen(
     }
 }
 
+/*
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun HomePreview(){
     SaoPauloHomeScreen()
 }
+
+ */

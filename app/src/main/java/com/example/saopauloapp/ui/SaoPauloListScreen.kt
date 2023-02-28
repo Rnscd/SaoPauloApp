@@ -20,19 +20,20 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.ViewModel
 import androidx.navigation.compose.rememberNavController
 import com.example.saopauloapp.data.DataSource
-import com.example.saopauloapp.data.DataSource.bibliotecas
-import com.example.saopauloapp.data.DataSource.shoppings
 import com.example.saopauloapp.model.Local
-import com.example.saopauloapp.model.Local.ShoppingLocal
 
 @Composable
 fun SaoPauloListScreen(
     tipo: List<Local>,
     titulo: String = "Sao Paulo",
+    viewModel: SPViewModel,
     onLocationClicked: () -> Unit = {},
-    onBackClicked: () -> Unit = {}
+    onBackClicked: () -> Unit = {},
+    onItemClicked: (Local) -> Unit = {},
+    places: Local
 ){
 
     Scaffold(
@@ -49,14 +50,14 @@ fun SaoPauloListScreen(
 
         LazyColumn() {
             items(tipo) { places ->
-                LocaisRow(tipos = places, onLocationClicked = onLocationClicked)
+                LocaisRow(tipos = places, onLocationClicked = onLocationClicked, onItemClicked= { viewModel.updateCurrentBib(it) })
             }
         }
     }
 }
 
 @Composable
-fun LocaisRow(tipos: Local, onLocationClicked: () -> Unit){
+fun LocaisRow(tipos: Local, onLocationClicked: () -> Unit, onItemClicked: (Local) -> Unit = {}){
 
     Card(elevation = 4.dp, modifier = Modifier
         .padding(15.dp)
@@ -68,15 +69,19 @@ fun LocaisRow(tipos: Local, onLocationClicked: () -> Unit){
         Row(modifier = Modifier.padding(horizontal = 2.dp), verticalAlignment = Alignment.CenterVertically) {
             Image(
                 painter = painterResource(id = tipos.foto), contentDescription = "",
-                modifier = Modifier.size(100.dp), contentScale = ContentScale.Crop
+                modifier = Modifier.size(100.dp).clickable { onItemClicked }, contentScale = ContentScale.Crop
             )
             Spacer(modifier = Modifier.width(5.dp))
             Text(text = tipos.nome)
         }
     }
 }
+
+/*
 @Preview
 @Composable
 fun ListPreview(){
-    SaoPauloListScreen(tipo = DataSource.parques)
+    SaoPauloListScreen(tipo = DataSource.getBibliotecaData())
 }
+
+ */
