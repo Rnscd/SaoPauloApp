@@ -16,6 +16,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -29,13 +30,8 @@ import com.example.saopauloapp.model.SPUiState
 fun SaoPauloDetailsScreen(selecinado: Local, titulo: String = "Sao Paulo", onBackClicked: () -> Unit = {}){
 
     Scaffold(
-        topBar ={ TopAppBar() {
-            IconButton(onClick = onBackClicked) {
-                Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "voltar")
-            }
-            Text(text = titulo, style =
-            TextStyle(color = MaterialTheme.colors.onBackground, fontSize = 20.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center )
-            )
+        topBar ={ TopAppBar(backgroundColor = MaterialTheme.colors.surface) {
+            SaoPauloTopBar(backButton = true, titulo = titulo, onBackClicked = onBackClicked)
         }
         }
     ) {
@@ -50,23 +46,43 @@ fun SaoPauloDetailsScreen(selecinado: Local, titulo: String = "Sao Paulo", onBac
 @Composable
 fun DetailColumn(detail: Local ){
 
-    Column(modifier = Modifier.padding(horizontal = 2.dp)) {
-            Image(
-                painter = painterResource(id = detail.foto), contentDescription = "",
-                modifier = Modifier.size(width = 350.dp, height = 280.dp), contentScale = ContentScale.Fit,
-                alignment = Alignment.Center
-            )
+    Column(modifier = Modifier
+        .fillMaxHeight(), ) {
 
-            Text(text = "Endereço:", fontWeight = FontWeight.Bold, textAlign = TextAlign.Left)
+        Card(elevation = 1.dp, modifier = Modifier.fillMaxHeight()) {
 
+            Column(modifier = Modifier.fillMaxHeight()) {
 
-            Text(text = detail.endereço, textAlign = TextAlign.Center)
+                Image(
+                    painter = painterResource(id = detail.foto),
+                    contentDescription = "",
+                    modifier = Modifier.fillMaxWidth(),
+                    contentScale = ContentScale.Fit,
+                    alignment = Alignment.Center
+                )
+                //Text(text = "Endereço:", style = MaterialTheme.typography.h6, textAlign = TextAlign.Left, modifier = Modifier.padding(start = 1.dp))
+                Text(text = "Endereço:", fontWeight = FontWeight.Bold, textAlign = TextAlign.Left, modifier = Modifier.padding(start = 6.dp))
+
+                Text(text = detail.endereço, textAlign = TextAlign.Center,  modifier = Modifier.padding(start = 6.dp), style = MaterialTheme.typography.body1)
+            }
+        }
 
             Spacer(modifier = Modifier.height(25.dp))
-            Text(text = "Sobre:", fontWeight = FontWeight.Bold , textAlign = TextAlign.Start)
+        Card(elevation = 1.dp) {
 
-
-            Text(text = stringResource(id = detail.sobre), textAlign = TextAlign.Center)
+            Text(text = stringResource(id = detail.sobre),
+                textAlign = TextAlign.Justify,
+                modifier = Modifier.padding(6.dp),
+                style = MaterialTheme.typography.body1
+            )
+        }
             
         }
     }
+
+@Preview
+@Composable
+fun DetailsPreview(){
+    SaoPauloDetailsScreen(DataSource.getRestauranteData()[1])
+
+}

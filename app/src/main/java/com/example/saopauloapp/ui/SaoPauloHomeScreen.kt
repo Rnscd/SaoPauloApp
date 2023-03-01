@@ -1,7 +1,6 @@
 package com.example.saopauloapp.ui
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.MaterialTheme
@@ -34,76 +33,112 @@ fun SaoPauloHomeScreen(
 ) {
 
     Scaffold(
-        topBar ={ TopAppBar() {
-            Text(text = "São Paulo", style =
-            TextStyle(color = MaterialTheme.colors.onBackground, fontSize = 20.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center ))
+        topBar ={ TopAppBar(backgroundColor = MaterialTheme.colors.surface) {
+            SaoPauloTopBar(titulo = "São Paulo")
         }
         }
     ) {
 
-    }
-    Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(horizontal = 5.dp, vertical = 70.dp)){
-        Row() {
-            Box(modifier = Modifier
-                .padding(horizontal = 5.dp, vertical = 15.dp)
-                .clickable(onClick = { navController.navigate(Dest.LISTRES.name) }),
-                contentAlignment = Alignment.Center) {
-                Image(
-                    painter = painterResource(id = R.drawable.restaurant),
-                    contentDescription = null,
-                    modifier = Modifier.size(170.dp),
-                    contentScale = ContentScale.Crop
-                )
-                Text(text = "Restaurantes", textAlign = TextAlign.Center, style =
-                TextStyle(color = Color.White, fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, shadow = Shadow() ))
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier
+                .padding(horizontal = 5.dp, vertical = 10.dp)
+                .verticalScroll(rememberScrollState())
+        ) {
 
-            }
-            Box(modifier = Modifier
-                .padding(horizontal = 5.dp, vertical = 15.dp)
-                .clickable(onClick = { navController.navigate(Dest.LISTPAR.name) }),
-                contentAlignment = Alignment.Center) {
+            Box(
+                modifier = Modifier
+                    .padding(vertical = 15.dp)
+                    .clickable(onClick = { navController.navigate(Dest.LISTRES.name) }),
+                contentAlignment = Alignment.Center
+            ) {
                 Image(
-                    painter = painterResource(id = R.drawable.park),
+                    painter = painterResource(id = R.drawable.figueirarubaiyat),
                     contentDescription = null,
-                    modifier = Modifier.size(170.dp),
-                    contentScale = ContentScale.Crop
+                    modifier = Modifier.fillMaxWidth()
 
                 )
-                Text(text = "Parques", textAlign = TextAlign.Center, style =
-                TextStyle(color = Color.White, fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, shadow = Shadow() ))
+                Text(
+                    text = "Restaurantes", textAlign = TextAlign.Center, style =
+                    TextStyle(
+                        color = Color.White,
+                        fontSize = 23.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        shadow = Shadow()
+                    )
+                )
 
             }
-        }
-        Row() {
-            Box(modifier = Modifier
-                .padding(horizontal = 5.dp, vertical = 15.dp)
-                .clickable(onClick = { navController.navigate(Dest.LISTSHO.name) }),
-                contentAlignment = Alignment.Center) {
+            Box(
+                modifier = Modifier
+                    .padding(vertical = 15.dp)
+                    .clickable(onClick = { navController.navigate(Dest.LISTPAR.name) }),
+                contentAlignment = Alignment.Center
+            ) {
                 Image(
-                    painter = painterResource(id = R.drawable.mall),
+                    painter = painterResource(id = R.drawable.parqvillalobos),
                     contentDescription = null,
-                    modifier = Modifier.size(170.dp),
-                    contentScale = ContentScale.Crop
+                    modifier = Modifier.fillMaxWidth()
+
+
                 )
-                Text(text = "Shoppings", textAlign = TextAlign.Center, style =
-                TextStyle(color = Color.White, fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, shadow = Shadow() ))
+                Text(
+                    text = "Parques", textAlign = TextAlign.Center, style =
+                    TextStyle(
+                        color = Color.White,
+                        fontSize = 23.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        shadow = Shadow()
+                    )
+                )
 
             }
-            Box(modifier = Modifier
-                .padding(horizontal = 5.dp, vertical = 15.dp)
-                .clickable(onClick = { navController.navigate(Dest.LISTBIB.name) }),
-                contentAlignment = Alignment.Center) {
+
+            Box(
+                modifier = Modifier
+                    .padding( vertical = 15.dp)
+                    .clickable(onClick = { navController.navigate(Dest.LISTSHO.name) }),
+                contentAlignment = Alignment.Center
+            ) {
                 Image(
-                    painter = painterResource(id = R.drawable.libdark),
+                    painter = painterResource(id = R.drawable.homesho),
                     contentDescription = null,
-                    modifier = Modifier.size(170.dp),
-                    contentScale = ContentScale.Crop
+                    modifier = Modifier.fillMaxWidth()
+
                 )
-                Text(text = "Bibliotecas", textAlign = TextAlign.Center, style =
-                TextStyle(color = Color.White, fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, shadow = Shadow() ))
+                Text(
+                    text = "Shoppings", textAlign = TextAlign.Center, style =
+                    TextStyle(
+                        color = Color.White,
+                        fontSize = 23.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        shadow = Shadow()
+                    )
+                )
+
             }
-        }
-        /*
+            Box(
+                modifier = Modifier
+                    .padding( vertical = 15.dp)
+                    .clickable(onClick = { navController.navigate(Dest.LISTBIB.name) }),
+                contentAlignment = Alignment.Center
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.mariodeandrade),
+                    contentDescription = null,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Text(
+                    text = "Bibliotecas", textAlign = TextAlign.Center, style =
+                    TextStyle(
+                        color = Color.White,
+                        fontSize = 23.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        shadow = Shadow()
+                    )
+                )
+            }
+            /*
         Row() {
             Box() {
                 Text(text = "Restaurantes")
@@ -124,14 +159,7 @@ fun SaoPauloHomeScreen(
             }
                 }
          */
+        }
     }
 }
 
-/*
-@Preview(showSystemUi = true, showBackground = true)
-@Composable
-fun HomePreview(){
-    SaoPauloHomeScreen()
-}
-
- */
