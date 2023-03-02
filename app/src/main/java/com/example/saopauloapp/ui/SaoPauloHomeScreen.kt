@@ -62,7 +62,7 @@ fun SaoPauloHomeScreen(
                     text = "Restaurantes", textAlign = TextAlign.Center, style =
                     TextStyle(
                         color = Color.White,
-                        fontSize = 23.sp,
+                        fontSize = 27.sp,
                         fontWeight = FontWeight.ExtraBold,
                         shadow = Shadow()
                     )
@@ -86,7 +86,7 @@ fun SaoPauloHomeScreen(
                     text = "Parques", textAlign = TextAlign.Center, style =
                     TextStyle(
                         color = Color.White,
-                        fontSize = 23.sp,
+                        fontSize = 27.sp,
                         fontWeight = FontWeight.ExtraBold,
                         shadow = Shadow()
                     )
@@ -110,7 +110,7 @@ fun SaoPauloHomeScreen(
                     text = "Shoppings", textAlign = TextAlign.Center, style =
                     TextStyle(
                         color = Color.White,
-                        fontSize = 23.sp,
+                        fontSize = 27.sp,
                         fontWeight = FontWeight.ExtraBold,
                         shadow = Shadow()
                     )
@@ -132,33 +132,13 @@ fun SaoPauloHomeScreen(
                     text = "Bibliotecas", textAlign = TextAlign.Center, style =
                     TextStyle(
                         color = Color.White,
-                        fontSize = 23.sp,
+                        fontSize = 27.sp,
                         fontWeight = FontWeight.ExtraBold,
                         shadow = Shadow()
                     )
                 )
             }
-            /*
-        Row() {
-            Box() {
-                Text(text = "Restaurantes")
-                Image(
-                    painter = painterResource(id = R.drawable.restaurant),
-                    contentDescription = null,
-                    modifier = Modifier.size(100.dp)
-                )
-            }
-            Spacer(modifier = Modifier.width(5.dp))
-            Box() {
-                Text(text = "Restaurantes")
-                Image(
-                    painter = painterResource(id = R.drawable.restaurant),
-                    contentDescription = null,
-                    modifier = Modifier.size(100.dp)
-                )
-            }
-                }
-         */
+
         }
     }
 }

@@ -5,7 +5,6 @@ import androidx.annotation.StringRes
 import com.example.saopauloapp.R
 
 data class Local(
-    val id: Int,
      val nome: String,
     @DrawableRes  val foto: Int,
      val endereço: String,

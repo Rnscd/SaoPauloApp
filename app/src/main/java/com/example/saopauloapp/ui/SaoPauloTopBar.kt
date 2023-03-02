@@ -21,13 +21,13 @@ fun SaoPauloTopBar(backButton: Boolean = false, titulo: String, onBackClicked: (
             Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "voltar")
         }
     } else{
-        Spacer(modifier = Modifier.width(25.dp))
+        Spacer(modifier = Modifier.width(45.dp))
     }
         Text(
             text = titulo, style =
             TextStyle(
                 color = MaterialTheme.colors.onBackground,
-                fontSize = 20.sp,
+                fontSize = 21.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center
             ), modifier = Modifier.padding(start = 5.dp)

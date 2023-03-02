@@ -63,20 +63,12 @@ fun LocaisRow(tipos: Local, onLocationClicked: () -> Unit){
 
         Row(modifier = Modifier.padding(horizontal = 2.dp), verticalAlignment = Alignment.CenterVertically) {
             Image(
-                painter = painterResource(id = tipos.foto), contentDescription = "",
+                painter = painterResource(id = tipos.foto), contentDescription = null,
                 modifier = Modifier.size(170.dp), contentScale = ContentScale.Crop
             )
             Spacer(modifier = Modifier.width(5.dp))
-            Text(text = tipos.nome)
+            Text(text = tipos.nome, style = MaterialTheme.typography.body2)
         }
     }
 }
 
-/*
-@Preview
-@Composable
-fun ListPreview(){
-    SaoPauloListScreen(tipo = DataSource.getBibliotecaData())
-}
-
- */

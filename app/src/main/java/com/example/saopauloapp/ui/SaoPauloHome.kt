@@ -5,6 +5,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHost
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -20,9 +21,7 @@ enum class Dest {
 
 
 @Composable
-fun SaoPauloApp(){
-
-    val navController = rememberNavController()
+fun SaoPauloApp(navController: NavHostController = rememberNavController()){
 
     val viewModel: SPViewModel = viewModel()
     val bibState by viewModel.bibState.collectAsState()

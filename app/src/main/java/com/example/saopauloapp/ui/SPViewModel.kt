@@ -6,7 +6,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.saopauloapp.data.DataSource
 import com.example.saopauloapp.model.Local
 import com.example.saopauloapp.model.SPUiState
-import com.example.saopauloapp.model.ThemeUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -43,8 +42,6 @@ class SPViewModel: ViewModel() {
             it.copy(currentPlace = selectedPlace)
         }
     }
-
-
 
     fun updateCurrentRes(selectedPlace: Local) {
         _resState.update {

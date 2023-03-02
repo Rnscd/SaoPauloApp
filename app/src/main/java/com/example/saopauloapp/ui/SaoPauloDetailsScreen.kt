@@ -60,20 +60,18 @@ fun DetailColumn(detail: Local ){
                     contentScale = ContentScale.Fit,
                     alignment = Alignment.Center
                 )
-                //Text(text = "Endereço:", style = MaterialTheme.typography.h6, textAlign = TextAlign.Left, modifier = Modifier.padding(start = 1.dp))
-                Text(text = "Endereço:", fontWeight = FontWeight.Bold, textAlign = TextAlign.Left, modifier = Modifier.padding(start = 6.dp))
 
-                Text(text = detail.endereço, textAlign = TextAlign.Center,  modifier = Modifier.padding(start = 6.dp), style = MaterialTheme.typography.body1)
+                Text(text = detail.endereço, textAlign = TextAlign.Center,  modifier = Modifier.padding(start = 6.dp), style = MaterialTheme.typography.h4)
             }
         }
 
-            Spacer(modifier = Modifier.height(25.dp))
+            Spacer(modifier = Modifier.height(10.dp))
         Card(elevation = 1.dp) {
 
             Text(text = stringResource(id = detail.sobre),
                 textAlign = TextAlign.Justify,
                 modifier = Modifier.padding(6.dp),
-                style = MaterialTheme.typography.body1
+                style = MaterialTheme.typography.body2
             )
         }
             
