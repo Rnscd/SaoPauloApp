@@ -11,16 +11,16 @@ class SaoPauloViewModelTest {
     @Test
     fun saoPauloViewModel_currentState(){
 
-        val currentLocalDetailNome = viewModel.parState.value.currentPlace.nome
-        assertEquals(currentLocalDetailNome, "Parque do Ibirapuera")
+        val currentLocalDetailNome = viewModel.uiState.value.currentPlace.nome
+        assertEquals(currentLocalDetailNome, "Mocotó")
 
     }
     @Test
     fun saopauloViewModel_updateState(){
 
-        viewModel.updateCurrentPar(DataSource.getParqueData()[1])
+        viewModel.updateCurrentDetail(DataSource.getParqueData()[1])
 
-        val newLocalDetailNome = viewModel.parState.value.currentPlace.nome
+        val newLocalDetailNome = viewModel.uiState.value.currentPlace.nome
 
         assertEquals(newLocalDetailNome, "Parque Trianon")
     }

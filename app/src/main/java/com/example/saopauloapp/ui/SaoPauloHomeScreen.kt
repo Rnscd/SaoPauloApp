@@ -24,12 +24,14 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.saopauloapp.R
+import com.example.saopauloapp.data.DataSource
 import com.example.saopauloapp.model.Local
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 @Composable
 fun SaoPauloHomeScreen(
-    navController: NavHostController
+    navController: NavHostController,
+    viewModel: SPViewModel
 ) {
 
     Scaffold(
@@ -49,7 +51,9 @@ fun SaoPauloHomeScreen(
             Box(
                 modifier = Modifier
                     .padding(vertical = 15.dp)
-                    .clickable(onClick = { navController.navigate(Dest.LISTRES.name) }),
+                    .clickable(onClick = {
+                        viewModel.uodateCurrentList(DataSource.getRestauranteData())
+                        navController.navigate(Dest.LISTSC.name) }),
                 contentAlignment = Alignment.Center
             ) {
                 Image(
@@ -72,14 +76,15 @@ fun SaoPauloHomeScreen(
             Box(
                 modifier = Modifier
                     .padding(vertical = 15.dp)
-                    .clickable(onClick = { navController.navigate(Dest.LISTPAR.name) }),
+                    .clickable(onClick = {
+                        viewModel.uodateCurrentList(DataSource.getParqueData())
+                        navController.navigate(Dest.LISTSC.name) }),
                 contentAlignment = Alignment.Center
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.parqvillalobos),
                     contentDescription = null,
                     modifier = Modifier.fillMaxWidth()
-
 
                 )
                 Text(
@@ -93,18 +98,18 @@ fun SaoPauloHomeScreen(
                 )
 
             }
-
             Box(
                 modifier = Modifier
                     .padding( vertical = 15.dp)
-                    .clickable(onClick = { navController.navigate(Dest.LISTSHO.name) }),
+                    .clickable(onClick = {
+                        viewModel.uodateCurrentList(DataSource.getShoppingData())
+                        navController.navigate(Dest.LISTSC.name) }),
                 contentAlignment = Alignment.Center
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.homesho),
                     contentDescription = null,
                     modifier = Modifier.fillMaxWidth()
-
                 )
                 Text(
                     text = "Shoppings", textAlign = TextAlign.Center, style =
@@ -115,12 +120,13 @@ fun SaoPauloHomeScreen(
                         shadow = Shadow()
                     )
                 )
-
             }
             Box(
                 modifier = Modifier
                     .padding( vertical = 15.dp)
-                    .clickable(onClick = { navController.navigate(Dest.LISTBIB.name) }),
+                    .clickable(onClick = {
+                        viewModel.uodateCurrentList(DataSource.getBibliotecaData())
+                        navController.navigate(Dest.LISTSC.name) }),
                 contentAlignment = Alignment.Center
             ) {
                 Image(
@@ -138,7 +144,6 @@ fun SaoPauloHomeScreen(
                     )
                 )
             }
-
         }
     }
 }

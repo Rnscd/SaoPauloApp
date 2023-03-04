@@ -47,22 +47,23 @@ class SaoPauloScreenNavigationTest {
     }
 
     @Test
-    fun saopauloNavHost_navigateToBibListScreen(){
+    fun saopauloNavHost_navigateToResListScreen(){
         composeTestRule.onNodeWithText("Restaurantes").performClick()
 
         composeTestRule.onNodeWithContentDescription("voltar").assertExists()
 
-        navController.assertScreen(Dest.LISTRES.name)
+        navController.assertScreen(Dest.LISTSC.name)
+        composeTestRule.onNodeWithText(DataSource.getRestauranteData()[0].categoria).assertExists()
     }
 
     @Test
-    fun saopauloNavHost_navigateToBibDetailsScreen() {
+    fun saopauloNavHost_navigateToResDetailsScreen() {
         composeTestRule.onNodeWithText("Restaurantes").performClick()
         composeTestRule.onNodeWithText(DataSource.getRestauranteData()[0].nome).performClick()
 
         composeTestRule.onNodeWithContentDescription("voltar").assertExists()
 
-        navController.assertScreen(Dest.DETAILSRES.name)
+        navController.assertScreen(Dest.DETAILSC.name)
 
         composeTestRule.onNodeWithText(DataSource.getRestauranteData()[0].nome).assertExists()
 
@@ -73,7 +74,7 @@ class SaoPauloScreenNavigationTest {
         composeTestRule.onNodeWithText(DataSource.getParqueData()[1].nome).performClick()
         composeTestRule.onNodeWithContentDescription("voltar").performClick()
 
-        navController.assertScreen(Dest.LISTPAR.name)
+        navController.assertScreen(Dest.LISTSC.name)
 
         composeTestRule.onNodeWithContentDescription("voltar").performClick()
 
